@@ -1,6 +1,6 @@
 package sg.edu.nus.comp;
 
-import javafx.application.Application;
+//import javafx.application.Application;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class Main {
     private static String DEFAULT_USER = "postgres";
-    private static String DEFAULT_PASSWORD = "password";
+    private static String DEFAULT_PASSWORD = "1p[2l;3m,";
 
     public static void main(String[] args) {
         // write your code here
-        DataBase dataBase = new DataBase(DEFAULT_USER, DEFAULT_PASSWORD);
+        DataBase dataBase = new DataBase("localhost", "Project1", "5432", DEFAULT_USER, DEFAULT_PASSWORD);
         try {
             dataBase.connect();
             //dataBase.executeQuery("insert into userinfo values (1, 'pass', NULL, '1234567' ,'1995-10-20');");
